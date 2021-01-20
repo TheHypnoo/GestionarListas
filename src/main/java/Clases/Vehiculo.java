@@ -1,6 +1,7 @@
 package Clases;
 
-public class Vehiculo {
+
+public abstract class Vehiculo {
 
     private Double consumoMinimo;
     private Double consumoActual;
@@ -19,7 +20,6 @@ public class Vehiculo {
         return consumoMinimo;
     }
 
-
     public void setConsumoActual(Double consumoActual) {
         this.consumoActual = consumoActual;
     }
@@ -35,7 +35,6 @@ public class Vehiculo {
     public Double getCapacidadMaxima() {
         return capacidadMaxima;
     }
-
 
     public void setConsumoKilometro(Double consumoKilometro) {
         this.consumoKilometro = consumoKilometro;
@@ -76,5 +75,7 @@ public class Vehiculo {
     public String getIdTripulante() {
         return idTripulante;
     }
+
+    public abstract Double calculoConsumo();
 
 }

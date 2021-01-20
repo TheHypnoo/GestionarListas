@@ -1,6 +1,8 @@
 package Clases;
 
-public class Aereo {
+import java.util.function.Consumer;
+
+public class Aereo extends Vehiculo {
 
     private int numeroMotores;
     private int tiempoFuncionamiento;
@@ -19,5 +21,12 @@ public class Aereo {
 
     public int getTiempoFuncionamiento() {
         return tiempoFuncionamiento;
+    }
+
+    @Override
+    public Double calculoConsumo() {
+        Double Consumo;
+        Consumo = getConsumoMinimo() + ((getConsumoActual() / getCapacidadMaxima()) * getConsumoKilometro()) + (getNumeroMotores() * getTiempoFuncionamiento());
+        return Consumo;
     }
 }

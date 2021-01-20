@@ -1,6 +1,6 @@
 package Clases;
 
-public class Terrestre {
+public class Terrestre extends Vehiculo {
 
     private int numeroCV;
     private int numeroAveries;
@@ -28,5 +28,12 @@ public class Terrestre {
 
     public int getCosteAverias() {
         return costeAverias;
+    }
+
+    @Override
+    public Double calculoConsumo() {
+        Double Consumo;
+        Consumo = getConsumoMinimo() + ((getConsumoActual() / getCapacidadMaxima()) * getConsumoKilometro()) + getNumeroAveries() * getCosteAverias();
+        return Consumo;
     }
 }

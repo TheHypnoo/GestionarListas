@@ -1,6 +1,6 @@
 package Clases;
 
-public class Maritimo {
+public class Maritimo extends Vehiculo {
 
     private int Longitud;
     private int Anchura;
@@ -38,6 +38,14 @@ public class Maritimo {
 
     public Data getFechaConstruccion() {
         return fechaConstruccion;
+    }
+
+    //A falta de añadir La data...
+    @Override
+    public Double calculoConsumo() {
+        Double Consumo;
+        Consumo = getConsumoMinimo() +((getConsumoActual() / getCapacidadMaxima()) * getConsumoKilometro()) * (getLongitud() + getAnchura() + getFechaFlotacion());
+        return Consumo;
     }
 
 }
