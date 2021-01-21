@@ -6,6 +6,14 @@ public class Terrestre extends Vehiculo {
     private int numeroAveries;
     private int costeAverias;
 
+    public Terrestre(Double consumoMinimo, Double consumoActual, Double capacidadMaxima, Double consumoKilometro, char tipoVehiculo, String id, Double velocidadMedia, String idTripulante,int numeroCV, int numeroAveries, int costeAverias) {
+        super(consumoMinimo, consumoActual, capacidadMaxima, consumoKilometro, tipoVehiculo, id, velocidadMedia, idTripulante);
+        this.numeroCV = numeroCV;
+        this.numeroAveries = numeroAveries;
+        this.costeAverias = costeAverias;
+    }
+
+
     public void setNumeroCV(int numeroCV) {
         this.numeroCV = numeroCV;
     }

@@ -19,15 +19,14 @@ public class Main {
         Main Start = new Main();
         //Start.menuPrincipal();
 
-        Terrestre terrestre = new Terrestre();
-        terrestre.setId("1");
+
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         gson.toJson(listaPersonal);
         System.out.println("Prueba: "+gson.toJson(listaPersonal));
 
         Writer writer = new FileWriter("volcado.json");
-        writer.write(gson.toJson(terrestre));
+        //writer.write(gson.toJson(terrestre));
         writer.close();
 
         Reader reader = new FileReader("volcado.json");
@@ -69,6 +68,35 @@ public class Main {
                 sc.next();
             }
         }
+    }
+
+
+    public ArrayList<Vehiculo> creacionVehiculos(){
+        int id = 0;
+        int idTripulante = 0;
+        for(int x = 0; x < 10; x++) {
+            //consumoMinimo, consumoActual, capacidadMaxima, consumoKilometro, tipoVehiculo, id, velocidadMedia, idTripulante
+            //Debo crear los consumos Minimo,Actual y su capacidadMaxima. Además de contabilizar el Consumo por kilometro (maybe 1l/12km)
+            int r = (int) (Math.random() * 3 + 1);
+
+            if (r == 1) {
+                char tipoVehiculo = 'T';
+
+                //Terrestre terrestre = new Terrestre()
+                //Es terrestre
+                id++;
+            } else if (r == 2) {
+                char tipoVehiculo = 'M';
+                //Es Maritimo
+                id++;
+            } else if (r == 3) {
+                char tipoVehiculo = 'A';
+                //Es aereo
+                id++;
+            }
+        }
+
+        return listaVehiculos;
     }
 
 

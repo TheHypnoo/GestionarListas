@@ -4,6 +4,18 @@ package Clases;
 public abstract class Vehiculo {
 
     private Double consumoMinimo;
+
+    public Vehiculo(Double consumoMinimo, Double consumoActual, Double capacidadMaxima, Double consumoKilometro, char tipoVehiculo, String id, Double velocidadMedia, String idTripulante) {
+        this.consumoMinimo = consumoMinimo;
+        this.consumoActual = consumoActual;
+        this.capacidadMaxima = capacidadMaxima;
+        this.consumoKilometro = consumoKilometro;
+        this.tipoVehiculo = tipoVehiculo;
+        this.id = id;
+        this.velocidadMedia = velocidadMedia;
+        this.idTripulante = idTripulante;
+    }
+
     private Double consumoActual;
     private Double capacidadMaxima;
     private Double consumoKilometro;

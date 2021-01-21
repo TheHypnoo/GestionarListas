@@ -7,6 +7,13 @@ public class Maritimo extends Vehiculo {
     private int fechaFlotacion;
     private Data fechaConstruccion;
 
+    public Maritimo(Double consumoMinimo, Double consumoActual, Double capacidadMaxima, Double consumoKilometro, char tipoVehiculo, String id, Double velocidadMedia, String idTripulante, int longitud, int anchura, int fechaFlotacion, Data fechaConstruccion) {
+        super(consumoMinimo, consumoActual, capacidadMaxima, consumoKilometro, tipoVehiculo, id, velocidadMedia, idTripulante);
+        Longitud = longitud;
+        Anchura = anchura;
+        this.fechaFlotacion = fechaFlotacion;
+        this.fechaConstruccion = fechaConstruccion;
+    }
 
     public void setLongitud(int longitud) {
         Longitud = longitud;
