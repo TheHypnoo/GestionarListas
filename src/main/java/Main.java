@@ -3,26 +3,34 @@ import Clases.Terrestre;
 import Clases.Vehiculo;
 import com.google.gson.*;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
 
-    private static Scanner sc = new Scanner(System.in);
-    private static Gson gson = new Gson();
-    private static ArrayList<Vehiculo> listaVehiculos = new ArrayList<>();
-    private static ArrayList<Personal> listaPersonal = new ArrayList<>();
+    private static final Scanner sc = new Scanner(System.in);
+    //private static final Gson gson = new Gson();
+    private static final ArrayList<Vehiculo> listaVehiculos = new ArrayList<>();
+    private static final ArrayList<Personal> listaPersonal = new ArrayList<>();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Main Start = new Main();
         //Start.menuPrincipal();
 
         Terrestre terrestre = new Terrestre();
         terrestre.setId("1");
 
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
         gson.toJson(listaPersonal);
         System.out.println("Prueba: "+gson.toJson(listaPersonal));
+
+        Writer writer = new FileWriter("volcado.json");
+        writer.write(gson.toJson(terrestre));
+        writer.close();
+
+        Reader reader = new FileReader("volcado.json");
 
     }
 

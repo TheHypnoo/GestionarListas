@@ -1,7 +1,5 @@
 package Clases;
 
-import java.util.function.Consumer;
-
 public class Aereo extends Vehiculo {
 
     private int numeroMotores;
