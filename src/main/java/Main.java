@@ -4,8 +4,10 @@ import Clases.Vehiculo;
 import com.google.gson.*;
 
 import java.io.*;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -18,18 +20,18 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Main Start = new Main();
         //Start.menuPrincipal();
-
-
-
+        Start.creacionVehiculos();
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        gson.toJson(listaPersonal);
-        System.out.println("Prueba: "+gson.toJson(listaPersonal));
+
+        //System.out.println("Prueba: "+gson.toJson(listaPersonal));
 
         Writer writer = new FileWriter("volcado.json");
-        //writer.write(gson.toJson(terrestre));
+        writer.write(gson.toJson(listaVehiculos));
         writer.close();
 
         Reader reader = new FileReader("volcado.json");
+
+
 
     }
 
@@ -72,34 +74,66 @@ public class Main {
 
 
     public ArrayList<Vehiculo> creacionVehiculos(){
-        int id = 0;
-        int idTripulante = 0;
-        for(int x = 0; x < 10; x++) {
+        String id = "Prueba";
+        String idTripulante = "Prueba";
+        int numeroCV;
+        int numeroAverias;
+        int costeAverias;
+        DecimalFormat df2 = new DecimalFormat("#.##");
+        for(int x = 0; x < 25; x++) {
             //consumoMinimo, consumoActual, capacidadMaxima, consumoKilometro, tipoVehiculo, id, velocidadMedia, idTripulante
             //Debo crear los consumos Minimo,Actual y su capacidadMaxima. Además de contabilizar el Consumo por kilometro (maybe 1l/12km)
-            int r = (int) (Math.random() * 3 + 1);
+            int queVehiculo = (int) (Math.random() * 3 + 1);
+            Random r = new Random();
+            double consumoMinimo = 4 + (15 - 4) * r.nextDouble();
+            consumoMinimo = Double.parseDouble(df2.format(consumoMinimo).replaceAll(",","."));
 
-            if (r == 1) {
+            double capacidadMaxima = 50 + (100 - 50) *  r.nextDouble();
+            capacidadMaxima = Double.parseDouble(df2.format(capacidadMaxima).replaceAll(",","."));
+            double consumoKilometro = 100/capacidadMaxima;
+            consumoKilometro = Double.parseDouble(df2.format(consumoKilometro).replaceAll(",","."));
+            double velocidadMedia = consumoKilometro * 100;
+            velocidadMedia = Double.parseDouble(df2.format(velocidadMedia).replaceAll(",","."));
+            double litrosConsumidos = capacidadMaxima / 2;
+            litrosConsumidos = Double.parseDouble(df2.format(litrosConsumidos).replaceAll(",","."));
+            //Rectificar el consumoActual que sea diferenciado por la velocidadMedia
+            double consumoActual = litrosConsumidos * 100 / 100;
+            consumoActual = Double.parseDouble(df2.format(consumoActual).replaceAll(",","."));
+
+            //if (queVehiculo == 1) {
                 char tipoVehiculo = 'T';
-
-                //Terrestre terrestre = new Terrestre()
+                if(velocidadMedia > 120) {
+                    numeroCV = (int) (110 + (velocidadMedia - 110) * r.nextDouble());
+                    numeroAverias = (int) (10 + (30 - 10) * r.nextDouble());
+                    costeAverias = (int) ((450 + (numeroAverias * 450) - 450) * r.nextDouble());
+                } else {
+                    numeroCV = (int) (60 + (velocidadMedia - 60) * r.nextDouble());
+                    numeroAverias = (int) (1 + (10 - 1) * r.nextDouble());
+                    costeAverias = (int) ((100 + (numeroAverias * 100) - 100) * r.nextDouble());
+                }
+                Terrestre terrestre = new Terrestre(consumoMinimo, consumoActual, capacidadMaxima, consumoKilometro, tipoVehiculo, id, velocidadMedia, idTripulante, numeroCV, numeroAverias,costeAverias);
+                listaVehiculos.add(terrestre);
                 //Es terrestre
-                id++;
-            } else if (r == 2) {
+            /*} else if (queVehiculo == 2) {
                 char tipoVehiculo = 'M';
                 //Es Maritimo
-                id++;
-            } else if (r == 3) {
+            } else if (queVehiculo == 3) {
                 char tipoVehiculo = 'A';
                 //Es aereo
-                id++;
             }
+             */
         }
 
         return listaVehiculos;
     }
 
+    public ArrayList<Personal> creacionPersonal(){
 
+        Random r = new Random();
+        //Generar DNI
+
+        return listaPersonal;
+    }
 
 
 
