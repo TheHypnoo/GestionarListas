@@ -47,11 +47,11 @@ public class Maritimo extends Vehiculo {
         return fechaConstruccion;
     }
 
-    //A falta de añadir La data...
+
     @Override
     public Double calculoConsumo() {
-        Double Consumo;
-        Consumo = getConsumoMinimo() +((getConsumoActual() / getCapacidadMaxima()) * getConsumoKilometro()) * (getLongitud() + getAnchura() + getFechaFlotacion());
+        double Consumo;
+        Consumo = getConsumoMinimo() +((getConsumoActual() / getCapacidadMaxima()) * getConsumoKilometro()) * (getLongitud() + getAnchura() + getFechaFlotacion()) - (getFechaConstruccion().getDia() + getFechaConstruccion().getMes() + getFechaConstruccion().getAny());
         return Consumo;
     }
 

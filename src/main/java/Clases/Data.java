@@ -3,8 +3,14 @@ package Clases;
 public class Data {
     private int dia;
     private int mes;
-    private int any;
 
+    public Data(int dia, int mes, int any) {
+        this.dia = dia;
+        this.mes = mes;
+        this.any = any;
+    }
+
+    private int any;
 
 
     public void setDia(int dia) {
