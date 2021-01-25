@@ -57,4 +57,14 @@ public class Personal {
         return Asignado;
     }
 
+    public String mostrarInfo() {
+        return "+---------------------------------------+" + "\n" +
+                "Nombre: " + getNombre() + "\n" +
+                "NIF: " +getNif() + "\n" +
+                "Especialidad: " +getEspecialidadVehiculo() + "\n" +
+                "Fecha de nacimiento: " +getFechaNacimiento().getDia() + "/" + getFechaNacimiento().getMes() + "/" + getFechaNacimiento().getAny() + "\n" +
+                "+---------------------------------------+";
+
+    }
+
 }

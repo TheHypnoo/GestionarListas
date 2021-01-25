@@ -29,8 +29,16 @@ public class Aereo extends Vehiculo {
 
     @Override
     public Double calculoConsumo() {
-        Double Consumo;
+        double Consumo;
         Consumo = getConsumoMinimo() + ((getConsumoActual() / getCapacidadMaxima()) * getConsumoKilometro()) + (getNumeroMotores() * getTiempoFuncionamiento());
         return Consumo;
+    }
+
+    public String mostrarInfo(){
+        return super.mostrarInfo() + "\n" +
+                "Numero de motores: " +getNumeroMotores() + "\n" +
+                "Tiempo de funcionamiento: " +getTiempoFuncionamiento() + "\n" +
+                "Consumo medio: " +calculoConsumo() + "\n" +
+                "+---------------------------------------+";
     }
 }

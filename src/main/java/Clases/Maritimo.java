@@ -50,9 +50,17 @@ public class Maritimo extends Vehiculo {
 
     @Override
     public Double calculoConsumo() {
-        double Consumo;
-        Consumo = getConsumoMinimo() +((getConsumoActual() / getCapacidadMaxima()) * getConsumoKilometro()) * (getLongitud() + getAnchura() + getFechaFlotacion()) - (getFechaConstruccion().getDia() + getFechaConstruccion().getMes() + getFechaConstruccion().getAny());
-        return Consumo;
+        return getConsumoMinimo() +((getConsumoActual() / getCapacidadMaxima()) * getConsumoKilometro()) * (getLongitud() + getAnchura() + getFechaFlotacion()) - (getFechaConstruccion().getDia() + getFechaConstruccion().getMes() + getFechaConstruccion().getAny());
+    }
+
+    public String mostrarInfo() {
+        return super.mostrarInfo() + "\n" +
+                "Longitud: " +getLongitud() + "\n" +
+                "Anchura: " +getAnchura() + "\n" +
+                "Fecha de Flotación: " +getFechaFlotacion() + "\n" +
+                "Fecha de Construcción: " +getFechaConstruccion().getDia() + "/" +getFechaConstruccion().getMes() + "/" + +getFechaConstruccion().getAny() + "\n" +
+                "Consumo medio: " +calculoConsumo() + "\n" +
+                "+---------------------------------------+";
     }
 
 }

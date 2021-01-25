@@ -40,8 +40,16 @@ public class Terrestre extends Vehiculo {
 
     @Override
     public Double calculoConsumo() {
-        Double Consumo;
-        Consumo = getConsumoMinimo() + ((getConsumoActual() / getCapacidadMaxima()) * getConsumoKilometro()) + getNumeroAveries() * getCosteAverias();
-        return Consumo;
+        return getConsumoMinimo() + ((getConsumoActual() / getCapacidadMaxima()) * getConsumoKilometro()) + getNumeroAveries() * getCosteAverias();
+    }
+
+    public String mostrarInfo(){
+
+        return super.mostrarInfo() + "\n" +
+                "Numero de CV del Vehiculo: " +getNumeroCV() + "\n" +
+                "Numero de Averias: " +getNumeroAveries() + "\n" +
+                "Coste de las Averias: " +getCosteAverias() + "\n" +
+                "Consumo medio: " +calculoConsumo() + "\n" +
+                "+---------------------------------------+";
     }
 }

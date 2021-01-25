@@ -1,0 +1,46 @@
+[
+  {
+    "Nif": "56435102W",
+    "Nombre": "Bartolomé",
+    "fechaNacimiento": {
+      "dia": 24,
+      "mes": 2,
+      "any": 1977
+    },
+    "especialidadVehiculo": "A",
+    "Asignado": false
+  },
+  {
+    "Nif": "39490759N",
+    "Nombre": "Addison",
+    "fechaNacimiento": {
+      "dia": 20,
+      "mes": 4,
+      "any": 1997
+    },
+    "especialidadVehiculo": "A",
+    "Asignado": false
+  },
+  {
+    "Nif": "24474693W",
+    "Nombre": "Dennis",
+    "fechaNacimiento": {
+      "dia": 18,
+      "mes": 9,
+      "any": 1964
+    },
+    "especialidadVehiculo": "T",
+    "Asignado": false
+  },
+  {
+    "Nif": "52016541V",
+    "Nombre": "Carina",
+    "fechaNacimiento": {
+      "dia": 15,
+      "mes": 11,
+      "any": 1965
+    },
+    "especialidadVehiculo": "T",
+    "Asignado": false
+  }
+]

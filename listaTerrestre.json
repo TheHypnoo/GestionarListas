@@ -1,0 +1,28 @@
+[
+  {
+    "numeroCV": 100,
+    "numeroAveries": 3,
+    "costeAverias": 298,
+    "consumoMinimo": 14.39,
+    "consumoActual": 42.65,
+    "capacidadMaxima": 85.3,
+    "consumoKilometro": 1.17,
+    "tipoVehiculo": "T",
+    "id": "4656-PNK",
+    "velocidadMedia": 117.0,
+    "idTripulante": ""
+  },
+  {
+    "numeroCV": 133,
+    "numeroAveries": 11,
+    "costeAverias": 1215,
+    "consumoMinimo": 11.84,
+    "consumoActual": 31.98,
+    "capacidadMaxima": 63.95,
+    "consumoKilometro": 1.56,
+    "tipoVehiculo": "T",
+    "id": "5148-CQS",
+    "velocidadMedia": 156.0,
+    "idTripulante": ""
+  }
+]

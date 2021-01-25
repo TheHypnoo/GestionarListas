@@ -1,0 +1,38 @@
+[
+  {
+    "Longitud": 126,
+    "Anchura": 25,
+    "fechaFlotacion": 1993,
+    "fechaConstruccion": {
+      "dia": 6,
+      "mes": 5,
+      "any": 1963
+    },
+    "consumoMinimo": 14.7,
+    "consumoActual": 29.61,
+    "capacidadMaxima": 59.23,
+    "consumoKilometro": 1.69,
+    "tipoVehiculo": "M",
+    "id": "0447-CJW",
+    "velocidadMedia": 169.0,
+    "idTripulante": ""
+  },
+  {
+    "Longitud": 85,
+    "Anchura": 42,
+    "fechaFlotacion": 1993,
+    "fechaConstruccion": {
+      "dia": 30,
+      "mes": 3,
+      "any": 1969
+    },
+    "consumoMinimo": 6.23,
+    "consumoActual": 33.89,
+    "capacidadMaxima": 67.78,
+    "consumoKilometro": 1.48,
+    "tipoVehiculo": "M",
+    "id": "2665-YRT",
+    "velocidadMedia": 148.0,
+    "idTripulante": ""
+  }
+]
