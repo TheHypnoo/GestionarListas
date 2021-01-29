@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "numeroMotores": 2,
+    "tiempoFuncionamiento": 8,
+    "consumoMinimo": 5.25,
+    "consumoActual": 35.9,
+    "capacidadMaxima": 71.8,
+    "consumoKilometro": 1.39,
+    "tipoVehiculo": "A",
+    "id": "3572-MNC",
+    "velocidadMedia": 139.0,
+    "idTripulante": ""
+  },
+  {
+    "numeroMotores": 4,
+    "tiempoFuncionamiento": 18,
+    "consumoMinimo": 11.38,
+    "consumoActual": 32.73,
+    "capacidadMaxima": 65.45,
+    "consumoKilometro": 1.53,
+    "tipoVehiculo": "A",
+    "id": "2018-BVH",
+    "velocidadMedia": 153.0,
+    "idTripulante": ""
+  },
+  {
+    "numeroMotores": 3,
+    "tiempoFuncionamiento": 25,
+    "consumoMinimo": 4.55,
+    "consumoActual": 43.67,
+    "capacidadMaxima": 87.34,
+    "consumoKilometro": 1.14,
+    "tipoVehiculo": "A",
+    "id": "2325-VJR",
+    "velocidadMedia": 114.0,
+    "idTripulante": ""
+  }
+]

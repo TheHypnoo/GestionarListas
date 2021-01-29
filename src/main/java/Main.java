@@ -104,11 +104,11 @@ public class Main {
                         System.out.println("Has salido.");
                         return;
                     }
-                    default -> System.out.println(Ansi.RED + Ansi.HIGH_INTENSITY + "Error, vuelve a introducir el modo nuevamente.");
+                    default -> System.out.println(Ansi.RED + Ansi.HIGH_INTENSITY + "Error, vuelve a introducir el modo nuevamente."+ Ansi.WHITE);
 
                 }
             } catch (InputMismatchException | IOException e) {
-                System.out.println(Ansi.RED + Ansi.HIGH_INTENSITY + "Debes insertar un número correspondiente al que se te indica.");
+                System.out.println(Ansi.RED + Ansi.HIGH_INTENSITY + "Debes insertar un número correspondiente al que se te indica."+ Ansi.WHITE);
                 sc.next();
             }
         }
@@ -313,7 +313,7 @@ public class Main {
                                 historial.add("Nombre: "+personal.getNombre() + " con NIF: "+personal.getNif() + " Esta asignado al vehiculo con matricula: " +vehiculos.getId());
                                 System.out.println("Ya se ha asignado la persona al vehiculo");
                             } else {
-                                System.out.println(Ansi.RED+"La especialidad del vehiculo no es igual a la de la persona.");
+                                System.out.println(Ansi.RED+"La especialidad del vehiculo no es igual a la de la persona."+ Ansi.WHITE);
                             }
                             break;
                         }
